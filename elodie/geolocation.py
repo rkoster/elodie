@@ -172,7 +172,7 @@ def lookup(**kwargs):
         return None
 
     try:
-        params = {'format': 'json', 'key': key}
+        params = {'format': 'json', 'accept-language': constants.accepted_language, 'key': key}
         params.update(kwargs)
         path = '/geocoding/v1/address'
         if('lat' in kwargs and 'lon' in kwargs):
